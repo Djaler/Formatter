@@ -1,0 +1,67 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-08-06 15:34+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/MainWindow.vala:79 ../src/MainWindow.vala:185
+msgid "Change"
+msgstr ""
+
+#: ../src/MainWindow.vala:87 ../src/MainWindow.vala:227
+msgid "Device"
+msgstr ""
+
+#: ../src/MainWindow.vala:105
+msgid "Formatter"
+msgstr ""
+
+#: ../src/MainWindow.vala:125
+msgid "%s was formatted into %s"
+msgstr ""
+
+#: ../src/MainWindow.vala:154
+msgid "Finished"
+msgstr ""
+
+#: ../src/MainWindow.vala:171
+msgid "File System"
+msgstr ""
+
+#: ../src/MainWindow.vala:193 ../src/MainWindow.vala:249
+#: ../src/MainWindow.vala:352
+msgid "No removable devices found…"
+msgstr ""
+
+#: ../src/MainWindow.vala:241
+msgid "Select Drive"
+msgstr ""
+
+#: ../src/MainWindow.vala:274
+msgid "Format"
+msgstr ""
+
+#: ../src/MainWindow.vala:282
+msgid "Format partition"
+msgstr ""
+
+#: ../src/MainWindow.vala:358
+msgid "No device chosen…"
+msgstr ""
+
+#: ../src/MainWindow.vala:360
+msgid "Ready!"
+msgstr ""

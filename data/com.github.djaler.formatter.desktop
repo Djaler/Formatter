@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Formatter
+Comment=A simple device formatter
+GenericName=Formatter
+Icon=djaler.formatter
+Exec=com.github.djaler.formatter %U
+Terminal=false
+Categories=System;GNOME;GTK;
+X-GNOME-Gettext-Domain=formatter
+Keywords=Format;Device;USB;

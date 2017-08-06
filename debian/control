@@ -1,0 +1,16 @@
+Source: com.github.djaler.formatter
+Section: x11
+Priority: optional
+Maintainer: Kirill Romanov <djaler1@gmail.com>
+Build-Depends: cmake (>= 2.8),
+               cmake-elementary,
+               debhelper (>= 9),
+               libgranite-dev,
+               valac (>= 0.26)
+Standards-Version: 3.9.3
+
+Package: com.github.djaler.formatter
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: A simple device formatter
+ Simple device formatter, written especially for elementary OS

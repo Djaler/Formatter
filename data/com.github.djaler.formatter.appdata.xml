@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2017 Kirill Romanov <djaler1@gmail.com> -->
+<component type="desktop">
+    <id>com.github.djaler.formatter.desktop</id>
+    <metadata_license>CC0-1.0</metadata_license>
+    <project_license>GPL-3.0+</project_license>
+    <name>Formatter</name>
+    <summary>A simple device formatter</summary>
+    <description>
+        <p>Format your removable devices like usb disk or sd card</p>
+    </description>
+    <categories>
+        <category>System</category>
+    </categories>
+    <custom>
+        <value key="x-appcenter-color-primary">#3E9AD6</value>
+        <value key="x-appcenter-color-primary-text">rgb(255,255,255)</value>
+        <value key="x-appcenter-suggested-price">1</value>
+    </custom>
+    <developer_name>Kirill Romanov</developer_name>
+    <url type="homepage">https://github.com/djaler/formatter</url>
+    <url type="bugtracker">https://github.com/djaler/formatter/issues</url>
+    <url type="help">https://github.com/djaler/formatter/issues</url>
+    <update_contact>djaler1@gmail.com</update_contact>
+    <screenshots>
+        <screenshot type="default">
+            <image>https://raw.githubusercontent.com/djaler/formatter/master/Screenshot.png</image>
+        </screenshot>
+    </screenshots>
+</component>
