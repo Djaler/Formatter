@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-06 15:34+0300\n"
+"POT-Creation-Date: 2017-08-08 00:48+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,51 +17,51 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/MainWindow.vala:79 ../src/MainWindow.vala:185
+#: ../src/MainWindow.vala:71 ../src/MainWindow.vala:177
 msgid "Change"
 msgstr ""
 
-#: ../src/MainWindow.vala:87 ../src/MainWindow.vala:227
+#: ../src/MainWindow.vala:79 ../src/MainWindow.vala:219
 msgid "Device"
 msgstr ""
 
-#: ../src/MainWindow.vala:105
+#: ../src/MainWindow.vala:97
 msgid "Formatter"
 msgstr ""
 
-#: ../src/MainWindow.vala:125
+#: ../src/MainWindow.vala:117
 msgid "%s was formatted into %s"
 msgstr ""
 
-#: ../src/MainWindow.vala:154
+#: ../src/MainWindow.vala:146
 msgid "Finished"
 msgstr ""
 
-#: ../src/MainWindow.vala:171
+#: ../src/MainWindow.vala:163
 msgid "File System"
 msgstr ""
 
-#: ../src/MainWindow.vala:193 ../src/MainWindow.vala:249
-#: ../src/MainWindow.vala:352
+#: ../src/MainWindow.vala:185 ../src/MainWindow.vala:241
+#: ../src/MainWindow.vala:344
 msgid "No removable devices found…"
 msgstr ""
 
-#: ../src/MainWindow.vala:241
+#: ../src/MainWindow.vala:233
 msgid "Select Drive"
 msgstr ""
 
-#: ../src/MainWindow.vala:274
+#: ../src/MainWindow.vala:266
 msgid "Format"
 msgstr ""
 
-#: ../src/MainWindow.vala:282
-msgid "Format partition"
+#: ../src/MainWindow.vala:274
+msgid "Format device"
 msgstr ""
 
-#: ../src/MainWindow.vala:358
+#: ../src/MainWindow.vala:350
 msgid "No device chosen…"
 msgstr ""
 
-#: ../src/MainWindow.vala:360
+#: ../src/MainWindow.vala:352
 msgid "Ready!"
 msgstr ""
