@@ -108,6 +108,7 @@ namespace Formatter {
                 filesystem_container.sensitive = false;
                 device_container.sensitive = false;
                 format_container.sensitive = false;
+                app_notification.set_reveal_child (false);
             });
             formatter.finished.connect (() => {
                 filesystem_container.sensitive = true;
