@@ -59,6 +59,9 @@ namespace Formatter {
                 case Formatter.Filesystems.EXT4:
                     spawn_args = {"pkexec", "mkfs.ext4", drive_identifier, "-F"};
                     break;
+                case Formatter.Filesystems.EXFAT:
+                    spawn_args = {"pkexec", "mkfs.exfat", drive_identifier};
+                    break;
                 case Formatter.Filesystems.FAT32:
                     spawn_args = {"pkexec", "mkfs.vfat", "-I", drive_identifier};
                     break;

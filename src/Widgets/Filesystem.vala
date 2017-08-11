@@ -21,7 +21,8 @@ namespace Formatter {
     public enum Filesystems {
         EXT4,
         FAT32,
-        NTFS;
+        NTFS,
+        EXFAT;
 
         public string get_name() {
             switch (this) {
@@ -34,13 +35,16 @@ namespace Formatter {
                 case NTFS:
                     return "NTFS";
 
+                case EXFAT:
+                    return "exFAT";
+
                 default:
                     assert_not_reached();
             }
         }
 
         public static Filesystems[] get_all() {
-            return { FAT32, EXT4, NTFS };
+            return { FAT32, EXFAT, EXT4, NTFS };
         }
     }
 
