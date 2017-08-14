@@ -323,7 +323,7 @@ namespace Formatter {
                     device_list.remove (child);
                 }
             }
-            if (selected_device.drive == drive) {
+            if (selected_device != null && selected_device.drive == drive) {
                 if (has_removable_devices) {
                     selected_device = device_list.get_children ().last ().data as Device;
                 } else {
