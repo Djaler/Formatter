@@ -68,7 +68,7 @@ namespace Formatter {
             	return false;
             }
             debug ("unix_device: %s", unix_device);
-            return (drive.is_media_removable () || drive.can_stop ()) && (unix_device.index_of ("/dev/sd") == 0 || unix_device.index_of ("/dev/mmc") == 0));
+            return (drive.is_media_removable () || drive.can_stop ()) && (unix_device.index_of ("/dev/sd") == 0 || unix_device.index_of ("/dev/mmc") == 0);
         }
     }
 }

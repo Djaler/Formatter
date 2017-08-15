@@ -27,4 +27,35 @@
             <image>https://raw.githubusercontent.com/djaler/formatter/master/Screenshot.png</image>
         </screenshot>
     </screenshots>
+    <releases>
+      <release version="0.1.3" date="2017-08-15">
+        <description>
+          <ul>
+            <li>Typo fix</li>
+          </ul>
+        </description>
+      </release>
+      <release version="0.1.2" date="2017-08-15">
+        <description>
+          <ul>
+            <li>USB 3.0 Support</li>
+          </ul>
+        </description>
+      </release>
+      <release version="0.1.1" date="2017-08-11">
+        <description>
+          <ul>
+            <li>Format to exFAT</li>
+          </ul>
+        </description>
+      </release>
+      <release version="0.1.0" date="2017-08-06">
+        <description>
+          <p>Initial Release</p>
+          <ul>
+            <li>Format devices to ext4, FAT32 or NTFS</li>
+          </ul>
+        </description>
+      </release>
+    </releases>
 </component>
