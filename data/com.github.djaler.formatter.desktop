@@ -1,7 +1,9 @@
 [Desktop Entry]
 Type=Application
 Name=Formatter
+Name[lt]=Formatavimo įrankis
 Comment=A simple device formatter
+Comment[lt]=Paprastas įrenginių formatavimo įrankis
 GenericName=Formatter
 Icon=djaler.formatter
 Exec=com.github.djaler.formatter %U
