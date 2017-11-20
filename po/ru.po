@@ -1,5 +1,64 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-08-08 00:48+0200\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Андрей Культяпов <camellan@yandex.ru>\n"
+"Language-Team: \n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Poedit 2.0.4\n"
+
+#: ../src/MainWindow.vala:71 ../src/MainWindow.vala:177
+msgid "Change"
+msgstr "Изменить"
+
+#: ../src/MainWindow.vala:79 ../src/MainWindow.vala:219
+msgid "Device"
+msgstr "Устройство"
+
+#: ../src/MainWindow.vala:97
+msgid "Formatter"
+msgstr "Formatter"
+
+#: ../src/MainWindow.vala:117
+msgid "%s was formatted into %s"
+msgstr "%s был отформатирован в %s"
+
+#: ../src/MainWindow.vala:146
+msgid "Finished"
+msgstr "Завершено"
+
+#: ../src/MainWindow.vala:163
+msgid "File System"
+msgstr "Файловая система"
+
+#: ../src/MainWindow.vala:185 ../src/MainWindow.vala:241
+#: ../src/MainWindow.vala:344
+msgid "No removable devices found…"
+msgstr "Съемные устройства не найдены…"
+
+#: ../src/MainWindow.vala:233
+msgid "Select Drive"
+msgstr "Выбрать диск"
+
+#: ../src/MainWindow.vala:266
+msgid "Format"
+msgstr "Форматировать"
+
+#: ../src/MainWindow.vala:274
+msgid "Format device"
+msgstr "Форматировать устройство"
+
+#: ../src/MainWindow.vala:350
+msgid "No device chosen…"
+msgstr "Не выбрано устройство…"
+
+#: ../src/MainWindow.vala:352
+msgid "Ready!"
+msgstr "Готово!"
