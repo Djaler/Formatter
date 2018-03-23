@@ -47,7 +47,7 @@ msgstr "Wybierz napęd"
 
 #: ../src/MainWindow.vala:266
 msgid "Format"
-msgstr "Formatuj"
+msgstr "Formatowanie"
 
 #: ../src/MainWindow.vala:274
 msgid "Format device"
