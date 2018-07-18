@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-08 00:48+0200\n"
+"POT-Creation-Date: 2018-07-18 23:17+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,51 +17,59 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/MainWindow.vala:71 ../src/MainWindow.vala:177
+#: ../src/MainWindow.vala:72 ../src/MainWindow.vala:162
 msgid "Change"
 msgstr ""
 
-#: ../src/MainWindow.vala:79 ../src/MainWindow.vala:219
+#: ../src/MainWindow.vala:80 ../src/MainWindow.vala:204
 msgid "Device"
 msgstr ""
 
-#: ../src/MainWindow.vala:97
+#: ../src/MainWindow.vala:98
 msgid "Formatter"
 msgstr ""
 
-#: ../src/MainWindow.vala:117
-msgid "%s was formatted into %s"
-msgstr ""
-
-#: ../src/MainWindow.vala:146
+#: ../src/MainWindow.vala:129 ../src/MainWindow.vala:324
 msgid "Finished"
 msgstr ""
 
-#: ../src/MainWindow.vala:163
+#: ../src/MainWindow.vala:148
 msgid "File System"
 msgstr ""
 
-#: ../src/MainWindow.vala:185 ../src/MainWindow.vala:241
-#: ../src/MainWindow.vala:344
+#: ../src/MainWindow.vala:170 ../src/MainWindow.vala:220
+#: ../src/MainWindow.vala:375
 msgid "No removable devices found…"
 msgstr ""
 
-#: ../src/MainWindow.vala:233
+#: ../src/MainWindow.vala:212
 msgid "Select Drive"
 msgstr ""
 
-#: ../src/MainWindow.vala:266
+#: ../src/MainWindow.vala:251
 msgid "Format"
 msgstr ""
 
-#: ../src/MainWindow.vala:274
+#: ../src/MainWindow.vala:259
 msgid "Format device"
 msgstr ""
 
-#: ../src/MainWindow.vala:350
+#: ../src/MainWindow.vala:267
+msgid "Enter label…"
+msgstr ""
+
+#: ../src/MainWindow.vala:271
 msgid "No device chosen…"
 msgstr ""
 
-#: ../src/MainWindow.vala:352
-msgid "Ready!"
+#: ../src/MainWindow.vala:314
+msgid "%s was formatted into %s"
+msgstr ""
+
+#: ../src/MainWindow.vala:316
+msgid "Error while formatting %s into %s"
+msgstr ""
+
+#: ../src/MainWindow.vala:326
+msgid "Error"
 msgstr ""
