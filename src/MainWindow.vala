@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2017-2017 Kirill Romanov <djaler1@gmail.com>
+ * Copyright (c) 2017-2018 Kirill Romanov <djaler1@gmail.com>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -104,27 +104,8 @@ namespace Formatter {
             devices.drive_disconnected.connect (device_removed);
 
             formatter = DeviceFormatter.instance;
-            formatter.begin.connect (() => {
-                filesystem_container.sensitive = false;
-                device_container.sensitive = false;
-                format_container.sensitive = false;
-                app_notification.set_reveal_child (false);
-            });
-            formatter.finished.connect (() => {
-                filesystem_container.sensitive = true;
-                device_container.sensitive = true;
-                format_container.sensitive = true;
-
-                var message = _("%s was formatted into %s").printf (selected_device.drive.get_name (), selected_filesystem.filesystem.get_name ());
-
-                if (is_active) {
-                    app_notification.title = message;
-                    app_notification.send_notification ();
-                } else {
-                    desktop_notification.set_body (message);
-                    application.send_notification ("notify.app", desktop_notification);
-                }
-            });
+            formatter.begin.connect (on_flash_started);
+            formatter.canceled.connect (on_flash_canceled);
 
             devices.init ();
             present ();
@@ -299,9 +280,50 @@ namespace Formatter {
             device_popover.visible = false;
         }
 
+        private void on_flash_started () {
+            filesystem_container.sensitive = false;
+            device_container.sensitive = false;
+            format_container.sensitive = false;
+            app_notification.set_reveal_child (false);
+        }
+
+        private void on_flash_canceled () {
+            formatter.finished.disconnect (on_flash_finished);
+
+            filesystem_container.sensitive = true;
+            device_container.sensitive = true;
+            format_container.sensitive = true;
+        }
+
+        private void on_flash_finished (bool success) {
+            formatter.finished.disconnect (on_flash_finished);
+
+            filesystem_container.sensitive = true;
+            device_container.sensitive = true;
+            format_container.sensitive = true;
+
+            string message;
+            if (success) {
+                message = _("%s was formatted into %s").printf (selected_device.drive.get_name (), selected_filesystem.filesystem.get_name ());   
+            } else {
+                message = _("Error while formatting %s into %s").printf (selected_device.drive.get_name (), selected_filesystem.filesystem.get_name ());
+            }
+
+            if (is_active) {
+                app_notification.title = message;
+                app_notification.send_notification ();
+            } else {
+                desktop_notification.set_body (message);
+                application.send_notification ("notify.app", desktop_notification);
+            }
+        }
+
         private void flash_image () {
             if (!formatter.is_running) {
                 selected_device.umount_all_volumes ();
+
+                formatter.finished.connect (on_flash_finished);
+
                 formatter.format_partition.begin(selected_device.drive, selected_filesystem.filesystem);
             }
         }

@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2017-2017 Kirill Romanov <djaler1@gmail.com>
+ * Copyright (c) 2017-2018 Kirill Romanov <djaler1@gmail.com>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -21,7 +21,7 @@ namespace Formatter {
 
     public class DeviceFormatter : GLib.Object {
 
-     	static DeviceFormatter _instance = null;
+        static DeviceFormatter _instance = null;
         public static DeviceFormatter instance {
             get {
                 if (_instance == null)
@@ -30,13 +30,17 @@ namespace Formatter {
             }
         }
 
-		private DeviceFormatter () {}
+        private DeviceFormatter () {}
 
         construct {
             this.is_running = false;
             this.begin.connect (() => {
                 this.is_running = true;
                 debug ("begin");
+            });
+            this.canceled.connect (() => {
+                this.is_running = false;
+                debug ("canceled");
             });
             this.finished.connect (() => {
                 this.is_running = false;
@@ -47,7 +51,8 @@ namespace Formatter {
         public bool is_running {get;set;}
 
         public signal void begin ();
-        public signal void finished ();
+        public signal void canceled ();
+        public signal void finished (bool success);
 
         Pid child_pid;
 
@@ -87,10 +92,37 @@ namespace Formatter {
                 stdout.printf ("GLibSpawnError: %s\n", e.message);
             }
 
+            IOChannel error_channel = new IOChannel.unix_new (standard_error);
+            error_channel.add_watch (IOCondition.IN | IOCondition.HUP, (channel, condition) => {
+                if (condition == IOCondition.HUP) {
+                    return false;
+                }
+
+                try {
+                    string line;
+                    channel.read_line (out line, null, null);
+
+                    if (line.contains ("Request dismissed")) {
+                        canceled ();
+                    } else {
+                        stdout.printf ("Error: %s", line);
+                    }
+                } catch (IOChannelError e) {
+                    stdout.printf ("IOChannelError: %s\n", e.message);
+                    return false;
+                } catch (ConvertError e) {
+                    stdout.printf ("ConvertError: %s\n", e.message);
+                    return false;
+                }
+
+                return true;
+            });
+
+
             ChildWatch.add (child_pid, (pid, status) => {
                 Process.close_pid (pid);
 
-                finished();
+                finished (status == 0);
             });
 
             begin ();
