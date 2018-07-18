@@ -313,6 +313,11 @@ namespace Formatter {
                 app_notification.title = message;
                 app_notification.send_notification ();
             } else {
+                if (success) {
+                    desktop_notification.set_title (_("Finished"));
+                } else {
+                    desktop_notification.set_title (_("Error"));
+                }
                 desktop_notification.set_body (message);
                 application.send_notification ("notify.app", desktop_notification);
             }
