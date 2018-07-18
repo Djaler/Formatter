@@ -40,8 +40,9 @@ namespace Formatter {
         Notification desktop_notification;
 
         Gtk.Grid format_container;
-        Gtk.Button format_start;
+        Gtk.Entry label_input;
         Gtk.Label format_label;
+        Gtk.Button format_start;
 
         Formatter.Filesystem _selected_filesystem = null;
         Formatter.Filesystem selected_filesystem {
@@ -52,7 +53,7 @@ namespace Formatter {
                 }
                 _selected_filesystem = value;
 
-                set_filesystem_label (selected_filesystem.filesystem.get_name ());
+                filesystem_name.label = selected_filesystem.filesystem.get_name ();
             }
         }
 
@@ -80,7 +81,7 @@ namespace Formatter {
                     device_logo.set_from_icon_name ("drive-removable-media-usb", Gtk.IconSize.DIALOG);
                 }
 
-                set_format_label ();
+                check_selected_device ();
             }
         }
 
@@ -135,6 +136,8 @@ namespace Formatter {
 
             add (overlay);
             show_all ();
+
+            check_selected_device ();
         }
 
         private void build_filesystem_area () {
@@ -203,12 +206,6 @@ namespace Formatter {
             title.hexpand = true;
             device_container.attach (title, 0, 0, 1, 1);
 
-            var device_grid = new Gtk.Grid ();
-            device_list = new Gtk.FlowBox ();
-            device_list.child_activated.connect (on_select_drive);
-
-            device_grid.add (device_list);
-
             device_logo = new Gtk.Image.from_icon_name ("drive-removable-media-usb", Gtk.IconSize.DIALOG);
             device_container.attach (device_logo, 0, 1, 1, 1);
 
@@ -223,6 +220,12 @@ namespace Formatter {
             device_name = new Gtk.Label (("<i>%s</i>").printf(_("No removable devices found…")));
             device_name.use_markup = true;
             device_container.attach (device_name, 0, 2, 1, 1);
+
+            var device_grid = new Gtk.Grid ();
+            device_list = new Gtk.FlowBox ();
+            device_list.child_activated.connect (on_select_drive);
+
+            device_grid.add (device_list);
 
             device_popover = new Gtk.Popover (select_device);
             device_popover.position = Gtk.PositionType.TOP;
@@ -260,9 +263,13 @@ namespace Formatter {
             format_start.clicked.connect (flash_image);
             format_container.attach (format_start, 0, 3, 1, 1);
 
-            format_label = new Gtk.Label ("");
+            label_input = new Gtk.Entry ();
+            label_input.placeholder_text = (_("Enter label…"));
+            label_input.hexpand = true;
+            format_container.attach(label_input, 0, 2, 1, 1);
+
+            format_label = new Gtk.Label (("<i>%s</i>").printf(_("No device chosen…")));
             format_label.use_markup = true;
-            set_format_label ();
             format_container.attach (format_label, 0, 2, 1, 1);
 
             content.attach (format_container, 2, 0, 1, 1);
@@ -329,7 +336,7 @@ namespace Formatter {
 
                 formatter.finished.connect (on_flash_finished);
 
-                formatter.format_partition.begin(selected_device.drive, selected_filesystem.filesystem);
+                formatter.format_partition.begin(selected_device.drive, selected_filesystem.filesystem, label_input.text);
             }
         }
 
@@ -361,10 +368,6 @@ namespace Formatter {
             device_container.sensitive = has_removable_devices;
         }
 
-        private void set_filesystem_label (string text) {
-            filesystem_name.label = text;
-        }
-
         private void set_device_label (string text) {
             if (text != "") {
                 device_name.label = text;
@@ -373,11 +376,14 @@ namespace Formatter {
             }
         }
 
-        private void set_format_label () {
+        private void check_selected_device () {
             if (selected_device == null) {
-                format_label.label = ("<i>%s</i>").printf(_("No device chosen…"));
+                format_label.visible = true;
+                label_input.visible = false;
             } else {
-                format_label.label = _("Ready!");
+                format_label.visible = false;
+                label_input.text = "";
+                label_input.visible = true;
             }
         }
     }

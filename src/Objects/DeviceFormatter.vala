@@ -56,22 +56,22 @@ namespace Formatter {
 
         Pid child_pid;
 
-        public async void format_partition(Drive drive, Formatter.Filesystems filesystem) {
+        public async void format_partition(Drive drive, Formatter.Filesystems filesystem, string label) {
             string[] spawn_args;
 
             string drive_identifier = drive.get_identifier ("unix-device");
             switch (filesystem) {
                 case Formatter.Filesystems.EXT4:
-                    spawn_args = {"pkexec", "mkfs.ext4", drive_identifier, "-F"};
+                    spawn_args = {"pkexec", "mkfs.ext4", drive_identifier, "-F", "-L", label};
                     break;
                 case Formatter.Filesystems.EXFAT:
-                    spawn_args = {"pkexec", "mkfs.exfat", drive_identifier};
+                    spawn_args = {"pkexec", "mkfs.exfat", drive_identifier, "-n", label};
                     break;
                 case Formatter.Filesystems.FAT32:
-                    spawn_args = {"pkexec", "mkfs.vfat", "-I", drive_identifier};
+                    spawn_args = {"pkexec", "mkfs.vfat", "-I", drive_identifier, "-n", label};
                     break;
                 case Formatter.Filesystems.NTFS:
-                    spawn_args = {"pkexec", "mkfs.ntfs", drive_identifier, "-f", "-F"};
+                    spawn_args = {"pkexec", "mkfs.ntfs", drive_identifier, "-f", "-F", "-L", label};
                     break;
                 default:
                     assert_not_reached();
