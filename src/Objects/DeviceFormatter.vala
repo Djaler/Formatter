@@ -62,16 +62,39 @@ namespace Formatter {
             string drive_identifier = drive.get_identifier ("unix-device");
             switch (filesystem) {
                 case Formatter.Filesystems.EXT4:
-                    spawn_args = {"pkexec", "mkfs.ext4", drive_identifier, "-F", "-L", label};
+                    spawn_args = {"pkexec", "mkfs.ext4", drive_identifier, "-F"};
+                    if (label != "") {
+                        spawn_args += "-L";
+                        spawn_args += label;
+                    }
                     break;
                 case Formatter.Filesystems.EXFAT:
-                    spawn_args = {"pkexec", "mkfs.exfat", drive_identifier, "-n", label};
+                    spawn_args = {"pkexec", "mkfs.exfat", drive_identifier};
+                    if (label != "") {
+                        spawn_args += "-n";
+                        spawn_args += label;
+                    }
                     break;
                 case Formatter.Filesystems.FAT32:
-                    spawn_args = {"pkexec", "mkfs.vfat", "-I", drive_identifier, "-n", label};
+                    spawn_args = {"pkexec", "mkfs.vfat", "-I", drive_identifier};
+                    if (label != "") {
+                        spawn_args += "-n";
+                        spawn_args += label;
+                    }
                     break;
                 case Formatter.Filesystems.NTFS:
-                    spawn_args = {"pkexec", "mkfs.ntfs", drive_identifier, "-f", "-F", "-L", label};
+                    spawn_args = {"pkexec", "mkfs.ntfs", drive_identifier, "-f", "-F"};
+                    if (label != "") {
+                        spawn_args += "-L";
+                        spawn_args += label;
+                    }
+                    break;
+                case Formatter.Filesystems.HFS_PLUS:
+                    spawn_args = {"pkexec", "mkfs.hfsplus", drive_identifier};
+                    if (label != "") {
+                        spawn_args += "-v";
+                        spawn_args += label;
+                    }
                     break;
                 default:
                     assert_not_reached();
