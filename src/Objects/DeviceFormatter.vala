@@ -75,8 +75,15 @@ namespace Formatter {
                         spawn_args += label;
                     }
                     break;
+                case Formatter.Filesystems.FAT16:
+                    spawn_args = {"pkexec", "mkfs.fat", "-F16", "-I", drive_identifier};
+                    if (label != "") {
+                        spawn_args += "-n";
+                        spawn_args += label;
+                    }
+                    break;
                 case Formatter.Filesystems.FAT32:
-                    spawn_args = {"pkexec", "mkfs.vfat", "-I", drive_identifier};
+                    spawn_args = {"pkexec", "mkfs.fat", "-F32", "-I", drive_identifier};
                     if (label != "") {
                         spawn_args += "-n";
                         spawn_args += label;

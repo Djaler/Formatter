@@ -20,6 +20,7 @@
 namespace Formatter {
     public enum Filesystems {
         EXT4,
+        FAT16,
         FAT32,
         NTFS,
         EXFAT,
@@ -29,6 +30,9 @@ namespace Formatter {
             switch (this) {
                 case EXT4:
                     return "ext4";
+
+                case FAT16:
+                    return "FAT16";
 
                 case FAT32:
                     return "FAT32";
@@ -48,7 +52,7 @@ namespace Formatter {
         }
 
         public static Filesystems[] get_all() {
-            return { FAT32, EXFAT, EXT4, NTFS, HFS_PLUS };
+            return { FAT32, FAT16, EXFAT, EXT4, NTFS, HFS_PLUS };
         }
     }
 
