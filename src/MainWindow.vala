@@ -259,7 +259,7 @@ namespace Formatter {
             format_start = new Gtk.Button.with_label (_("Format device"));
             format_start.valign = Gtk.Align.END;
             format_start.vexpand = true;
-            format_start.get_style_context ().add_class(Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+            format_start.get_style_context ().add_class(Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
             format_start.clicked.connect (flash_image);
             format_container.attach (format_start, 0, 3, 1, 1);
 
