@@ -1,3 +1,43 @@
+com.github.djaler.formatter (0.2.0) xenial; urgency=low
+
+  * Check for exit codes
+  * Set device label
+  * HFS+ support
+  * FAT16 support
+
+ -- Kirill Romanov <djaler1@gmail.com>  Sun, 18 Jul 2018 15:32:00 +0300
+
+com.github.djaler.formatter (0.1.5) xenial; urgency=low
+
+  * Icon path fixed
+
+ -- Kirill Romanov <djaler1@gmail.com>  Sun, 22 Nov 2017 15:32:00 +0300
+
+com.github.djaler.formatter (0.1.4) xenial; urgency=low
+
+  * Added Lithuanian translate.
+  * Added Russian translate
+
+ -- Kirill Romanov <djaler1@gmail.com>  Sun, 22 Nov 2017 15:32:00 +0300
+
+com.github.djaler.formatter (0.1.3) xenial; urgency=low
+
+  * Typo fix.
+
+ -- Kirill Romanov <djaler1@gmail.com>  Sun, 15 Aug 2017 15:32:00 +0300
+
+com.github.djaler.formatter (0.1.2) xenial; urgency=low
+
+  * USB 3.0 Support.
+
+ -- Kirill Romanov <djaler1@gmail.com>  Sun, 15 Aug 2017 15:32:00 +0300
+
+com.github.djaler.formatter (0.1.1) xenial; urgency=low
+
+  * Format to exFAT.
+
+ -- Kirill Romanov <djaler1@gmail.com>  Sun, 11 Aug 2017 15:32:00 +0300
+
 com.github.djaler.formatter (0.1.0) xenial; urgency=low
 
   * Initial Release.
