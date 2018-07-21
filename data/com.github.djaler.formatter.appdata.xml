@@ -28,6 +28,14 @@
         </screenshot>
     </screenshots>
     <releases>
+      <release version="0.2.1" date="2018-07-21">
+        <description>
+          <ul>
+            <li>Updated Russian translation</li>
+            <li>Minor style improvement</li>
+          </ul>
+        </description>
+      </release>
       <release version="0.2.0" date="2018-07-18">
         <description>
           <ul>
