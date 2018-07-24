@@ -69,6 +69,7 @@ namespace Formatter {
 
                 if (selected_device != null) {
                     set_device_label (selected_device.drive.get_name ());
+                    set_partition_label (selected_device.drive.get_name ());
                     select_device.label = _("Change");
                     if (selected_device.is_card) {
                         device_logo.set_from_icon_name ("media-flash", Gtk.IconSize.DIALOG);
@@ -376,13 +377,16 @@ namespace Formatter {
             }
         }
 
+        private void set_partition_label (string text) {
+        	label_input.text = text;
+        }
+
         private void check_selected_device () {
             if (selected_device == null) {
                 format_label.visible = true;
                 label_input.visible = false;
             } else {
                 format_label.visible = false;
-                label_input.text = "";
                 label_input.visible = true;
             }
         }
