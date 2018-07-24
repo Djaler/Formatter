@@ -28,6 +28,13 @@
         </screenshot>
     </screenshots>
     <releases>
+      <release version="0.2.2" date="2018-07-24">
+        <description>
+          <ul>
+            <li>Predefined partition label</li>
+          </ul>
+        </description>
+      </release>
       <release version="0.2.1" date="2018-07-21">
         <description>
           <ul>
