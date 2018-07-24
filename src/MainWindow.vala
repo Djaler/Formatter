@@ -44,6 +44,8 @@ namespace Formatter {
         Gtk.Label format_label;
         Gtk.Button format_start;
 
+        int label_max_length_bytes = 0;
+
         Formatter.Filesystem _selected_filesystem = null;
         Formatter.Filesystem selected_filesystem {
             get { return _selected_filesystem; }
@@ -54,6 +56,8 @@ namespace Formatter {
                 _selected_filesystem = value;
 
                 filesystem_name.label = selected_filesystem.filesystem.get_name ();
+
+                update_partition_label_max_size ();
             }
         }
 
@@ -68,8 +72,7 @@ namespace Formatter {
                 format_container.sensitive = selected_device != null;
 
                 if (selected_device != null) {
-                    set_device_label (selected_device.drive.get_name ());
-                    set_partition_label (selected_device.drive.get_name ());
+                    update_device_label ();
                     select_device.label = _("Change");
                     if (selected_device.is_card) {
                         device_logo.set_from_icon_name ("media-flash", Gtk.IconSize.DIALOG);
@@ -77,7 +80,7 @@ namespace Formatter {
                         device_logo.set_from_gicon (selected_device.drive.get_icon (), Gtk.IconSize.DIALOG);
                     }
                 } else {
-                    set_device_label ("");
+                    update_device_label ();
                     select_device.label = _("Device");
                     device_logo.set_from_icon_name ("drive-removable-media-usb", Gtk.IconSize.DIALOG);
                 }
@@ -139,6 +142,10 @@ namespace Formatter {
             show_all ();
 
             check_selected_device ();
+
+            if (selected_filesystem == null) {
+                selected_filesystem = filesystem_list.get_child_at_index(0) as Formatter.Filesystem;
+            }
         }
 
         private void build_filesystem_area () {
@@ -188,9 +195,6 @@ namespace Formatter {
             foreach (var filesystem in Formatter.Filesystems.get_all ()) {
                 var item = new Formatter.Filesystem (filesystem);
                 filesystem_list.add (item);
-                if (selected_filesystem == null) {
-                    selected_filesystem = item;
-                }
             }
 
             filesystem_grid.show_all ();
@@ -268,6 +272,17 @@ namespace Formatter {
             label_input.placeholder_text = (_("Enter label…"));
             label_input.hexpand = true;
             format_container.attach(label_input, 0, 2, 1, 1);
+            label_input.changed.connect (() => {
+                update_partition_label_max_size ();
+            });
+            label_input.insert_text.connect ((new_text, new_text_length) => {
+                if (label_max_length_bytes != 0) {
+                    if (label_input.buffer.get_bytes() + new_text_length > label_max_length_bytes) {
+                        Signal.stop_emission_by_name (label_input, "insert_text");
+                        Gdk.beep ();
+                    }
+                }
+            });
 
             format_label = new Gtk.Label (("<i>%s</i>").printf(_("No device chosen…")));
             format_label.use_markup = true;
@@ -369,16 +384,40 @@ namespace Formatter {
             device_container.sensitive = has_removable_devices;
         }
 
-        private void set_device_label (string text) {
-            if (text != "") {
-                device_name.label = text;
+        private void update_device_label () {
+            if (selected_device != null) {
+                device_name.label = selected_device.drive.get_name ();
             } else {
                 device_name.label = ("<i>%s</i>").printf(_("No removable devices found…"));
             }
         }
 
-        private void set_partition_label (string text) {
-        	label_input.text = text;
+        private void update_partition_label_max_size() {
+            label_max_length_bytes = 0;
+            var label_max_length_chars = 0;
+
+            switch (selected_filesystem.filesystem) {
+                case Formatter.Filesystems.EXT4:
+                    label_max_length_bytes = 16;
+                    break;
+                case Formatter.Filesystems.EXFAT:
+                    label_max_length_chars = 15;
+                    break;
+                case Formatter.Filesystems.FAT16:
+                case Formatter.Filesystems.FAT32:
+                    label_max_length_chars = 11;
+                    break;
+                case Formatter.Filesystems.NTFS:
+                    label_max_length_chars = 32;
+                    break;
+                case Formatter.Filesystems.HFS_PLUS:
+                    label_max_length_chars = 64; //I didn't find read max length, but I think 64 it enough
+                    break;
+                default:
+                    assert_not_reached();
+            }
+
+            label_input.max_length = label_max_length_chars;
         }
 
         private void check_selected_device () {
