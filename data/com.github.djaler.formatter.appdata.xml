@@ -28,6 +28,14 @@
         </screenshot>
     </screenshots>
     <releases>
+      <release version="0.2.3" date="2018-07-25">
+        <description>
+          <ul>
+          	<li>Add partition label limitations</li>
+            <li>Remove predefined partition label due to limitations</li>
+          </ul>
+        </description>
+      </release>
       <release version="0.2.2" date="2018-07-24">
         <description>
           <ul>
