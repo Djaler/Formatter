@@ -2,7 +2,7 @@
 Type=Application
 Name=Formatter
 Name[lt]=Formatavimo įrankis
-Comment=A simple device formatter
+Comment=Format devices
 Comment[lt]=Paprastas įrenginių formatavimo įrankis
 Comment[pl]=Prosty formater urządzeń
 GenericName=Formatter
