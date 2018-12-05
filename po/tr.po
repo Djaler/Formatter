@@ -49,7 +49,7 @@ msgstr "Cihaz Seç"
 
 #: ../src/MainWindow.vala:251
 msgid "Format"
-msgstr ""
+msgstr "Formatla"
 
 #: ../src/MainWindow.vala:259
 msgid "Format device"
@@ -65,7 +65,7 @@ msgstr "Cihaz seçilmedi…"
 
 #: ../src/MainWindow.vala:314
 msgid "%s was formatted into %s"
-msgstr ""
+msgstr "%s %s üzerine formatlandı"
 
 #: ../src/MainWindow.vala:316
 msgid "Error while formatting %s into %s"
