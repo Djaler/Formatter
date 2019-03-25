@@ -75,8 +75,8 @@ namespace Formatter {
             title = new Gtk.Label (filesystem.get_name ());
             title.margin_top = 6;
             title.margin_bottom = 6;
-            title.margin_right = 12;
-            title.margin_left = 12;
+            title.margin_start = 12;
+            title.margin_end = 12;
             content.attach (title, 0, 0, 1, 1);
         }
     }
