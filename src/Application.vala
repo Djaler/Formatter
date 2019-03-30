@@ -19,7 +19,7 @@
 
 namespace Formatter {
 
-    public class FormatterApp : Granite.Application {
+    public class FormatterApp : Gtk.Application {
 
         static FormatterApp _instance = null;
 
@@ -32,10 +32,7 @@ namespace Formatter {
         }
 
         construct {
-            program_name = "Formatter";
-            exec_name = "com.github.djaler.formatter";
             application_id = "com.github.djaler.formatter";
-            app_launcher = application_id + ".desktop";
         }
 
         Gtk.Window mainwindow;
