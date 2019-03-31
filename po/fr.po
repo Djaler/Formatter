@@ -27,7 +27,7 @@ msgstr "Appareil"
 
 #: src/MainWindow.vala:102
 msgid "Formatter"
-msgstr "Formatter"
+msgstr "Formateur"
 
 #: src/MainWindow.vala:133 src/MainWindow.vala:340
 msgid "Finished"
