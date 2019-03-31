@@ -1,0 +1,115 @@
+# Icelandic translations for extra package.
+# Copyright (C) 2019 THE extra'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the extra package.
+# Automatically generated, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: extra\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-31 10:41+0200\n"
+"PO-Revision-Date: 2019-03-31 10:41+0200\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: is\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ASCII\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/com.github.djaler.formatter.desktop.in:4
+#: data/com.github.djaler.formatter.desktop.in:6
+#: data/com.github.djaler.formatter.appdata.xml.in:7
+msgid "Formatter"
+msgstr ""
+
+#: data/com.github.djaler.formatter.desktop.in:5
+msgid "Format devices"
+msgstr ""
+
+#: data/com.github.djaler.formatter.desktop.in:7
+msgid "com.github.djaler.formatter"
+msgstr ""
+
+#: data/com.github.djaler.formatter.desktop.in:12
+msgid "Format;Device;USB;"
+msgstr ""
+
+#: data/com.github.djaler.formatter.appdata.xml.in:8
+msgid "A simple device formatter"
+msgstr ""
+
+#: data/com.github.djaler.formatter.appdata.xml.in:10
+msgid "Format your removable devices like usb disk or sd card"
+msgstr ""
+
+#: data/com.github.djaler.formatter.appdata.xml.in:20
+msgid "Kirill Romanov"
+msgstr ""
+
+#: data/com.github.djaler.formatter.appdata.xml.in:34
+msgid "Add partition label limitations"
+msgstr ""
+
+#: data/com.github.djaler.formatter.appdata.xml.in:35
+msgid "Remove predefined partition label due to limitations"
+msgstr ""
+
+#: data/com.github.djaler.formatter.appdata.xml.in:42
+msgid "Predefined partition label"
+msgstr ""
+
+#: data/com.github.djaler.formatter.appdata.xml.in:49
+msgid "Updated Russian translation"
+msgstr ""
+
+#: data/com.github.djaler.formatter.appdata.xml.in:50
+msgid "Minor style improvement"
+msgstr ""
+
+#: data/com.github.djaler.formatter.appdata.xml.in:57
+msgid "Check for exit codes"
+msgstr ""
+
+#: data/com.github.djaler.formatter.appdata.xml.in:58
+msgid "Set device label"
+msgstr ""
+
+#: data/com.github.djaler.formatter.appdata.xml.in:59
+msgid "HFS+ support"
+msgstr ""
+
+#: data/com.github.djaler.formatter.appdata.xml.in:60
+msgid "FAT16 support"
+msgstr ""
+
+#: data/com.github.djaler.formatter.appdata.xml.in:67
+msgid "Icon path fixed"
+msgstr ""
+
+#: data/com.github.djaler.formatter.appdata.xml.in:74
+msgid "Added Lithuanian translate"
+msgstr ""
+
+#: data/com.github.djaler.formatter.appdata.xml.in:75
+msgid "Added Russian translate"
+msgstr ""
+
+#: data/com.github.djaler.formatter.appdata.xml.in:82
+msgid "Typo fix"
+msgstr ""
+
+#: data/com.github.djaler.formatter.appdata.xml.in:89
+msgid "USB 3.0 Support"
+msgstr ""
+
+#: data/com.github.djaler.formatter.appdata.xml.in:96
+msgid "Format to exFAT"
+msgstr ""
+
+#: data/com.github.djaler.formatter.appdata.xml.in:102
+msgid "Initial Release"
+msgstr ""
+
+#: data/com.github.djaler.formatter.appdata.xml.in:104
+msgid "Format devices to ext4, FAT32 or NTFS"
+msgstr ""
