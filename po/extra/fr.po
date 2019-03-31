@@ -37,7 +37,7 @@ msgstr "Formater;Périphérique;USB;"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:8
 msgid "A simple device formatter"
-msgstr "Un simpleformateur de périphérique"
+msgstr "Un simple formateur de périphérique"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:10
 msgid "Format your removable devices like usb disk or sd card"
