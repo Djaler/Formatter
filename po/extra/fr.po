@@ -1,7 +1,7 @@
 # French translations for extra package.
 # Copyright (C) 2019 THE extra'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the extra package.
-# Automatically generated, 2019.
+# NathanBnm, 2019.
 #
 msgid ""
 msgstr ""
@@ -9,8 +9,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-31 10:41+0200\n"
 "PO-Revision-Date: 2019-03-31 10:41+0200\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"Last-Translator: NathanBnm\n"
+"Language-Team: Français\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,96 +21,96 @@ msgstr ""
 #: data/com.github.djaler.formatter.desktop.in:6
 #: data/com.github.djaler.formatter.appdata.xml.in:7
 msgid "Formatter"
-msgstr ""
+msgstr "Formateur"
 
 #: data/com.github.djaler.formatter.desktop.in:5
 msgid "Format devices"
-msgstr ""
+msgstr "Formattez des périphériques"
 
 #: data/com.github.djaler.formatter.desktop.in:7
 msgid "com.github.djaler.formatter"
-msgstr ""
+msgstr "com.github.djaler.formatter"
 
 #: data/com.github.djaler.formatter.desktop.in:12
 msgid "Format;Device;USB;"
-msgstr ""
+msgstr "Formater;Périphérique;USB;"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:8
 msgid "A simple device formatter"
-msgstr ""
+msgstr "Un simpleformateur de périphérique"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:10
 msgid "Format your removable devices like usb disk or sd card"
-msgstr ""
+msgstr "Formatez vos périphériques amovibles comme des clés USB ou cartes SD"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:20
 msgid "Kirill Romanov"
-msgstr ""
+msgstr "Kirill Romanov"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:34
 msgid "Add partition label limitations"
-msgstr ""
+msgstr "Ajout des limitations pour le nom de partition"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:35
 msgid "Remove predefined partition label due to limitations"
-msgstr ""
+msgstr "Suppression du nom de partition prédéfini en raison des limitations"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:42
 msgid "Predefined partition label"
-msgstr ""
+msgstr "Nom de partition prédéfini"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:49
 msgid "Updated Russian translation"
-msgstr ""
+msgstr "Mise à jour des traductions en russe"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:50
 msgid "Minor style improvement"
-msgstr ""
+msgstr "Amélioration graphique mineure"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:57
 msgid "Check for exit codes"
-msgstr ""
+msgstr "Vérifier les codes de fermeture"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:58
 msgid "Set device label"
-msgstr ""
+msgstr "Définir le nom d'un périphérique"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:59
 msgid "HFS+ support"
-msgstr ""
+msgstr "Prise en charge de HFS+"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:60
 msgid "FAT16 support"
-msgstr ""
+msgstr "Prise en charge de FAT16"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:67
 msgid "Icon path fixed"
-msgstr ""
+msgstr "Chemin de l'icône corrigé"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:74
 msgid "Added Lithuanian translate"
-msgstr ""
+msgstr "Ajout des traductions en lituanien"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:75
 msgid "Added Russian translate"
-msgstr ""
+msgstr "Ajout des traductions en russe"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:82
 msgid "Typo fix"
-msgstr ""
+msgstr "Correction typographique"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:89
 msgid "USB 3.0 Support"
-msgstr ""
+msgstr "Prise en charge de l'USB 3.0"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:96
 msgid "Format to exFAT"
-msgstr ""
+msgstr "Formatage en exFAT"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:102
 msgid "Initial Release"
-msgstr ""
+msgstr "Version initiale"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:104
 msgid "Format devices to ext4, FAT32 or NTFS"
-msgstr ""
+msgstr "Formattez des périphériques en ext4, FAT32 ou NTFS"
