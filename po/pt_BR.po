@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.djaler.formatter\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-31 10:40+0200\n"
+"POT-Creation-Date: 2019-03-31 10:47+0200\n"
 "PO-Revision-Date: 2019-03-31 10:40+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -19,58 +19,58 @@ msgstr ""
 
 #: src/MainWindow.vala:76 src/MainWindow.vala:170
 msgid "Change"
-msgstr ""
+msgstr "Alterar"
 
 #: src/MainWindow.vala:84 src/MainWindow.vala:209
 msgid "Device"
-msgstr ""
+msgstr "Dispositivo"
 
 #: src/MainWindow.vala:102
 msgid "Formatter"
-msgstr ""
+msgstr "Formatador"
 
 #: src/MainWindow.vala:133 src/MainWindow.vala:340
 msgid "Finished"
-msgstr ""
+msgstr "Finalizado"
 
 #: src/MainWindow.vala:156
 msgid "File System"
-msgstr ""
+msgstr "Sistema de arquivo"
 
 #: src/MainWindow.vala:178 src/MainWindow.vala:225 src/MainWindow.vala:391
 msgid "No removable devices found…"
-msgstr ""
+msgstr "Nenhum dispositivo removível encontrado…"
 
 #: src/MainWindow.vala:217
 msgid "Select Drive"
-msgstr ""
+msgstr "Selecione uma unidade"
 
 #: src/MainWindow.vala:256
 msgid "Format"
-msgstr ""
+msgstr "Formatar"
 
 #: src/MainWindow.vala:264
 msgid "Format device"
-msgstr ""
+msgstr "Formatar dispositivo"
 
 #: src/MainWindow.vala:272
 msgid "Enter label…"
-msgstr ""
+msgstr "Digite o rótulo…"
 
 #: src/MainWindow.vala:287
 msgid "No device chosen…"
-msgstr ""
+msgstr "Nenhum dispositivo escolhido…"
 
 #: src/MainWindow.vala:330
 #, c-format
 msgid "%s was formatted into %s"
-msgstr ""
+msgstr "%s foi formatado em %s"
 
 #: src/MainWindow.vala:332
 #, c-format
 msgid "Error while formatting %s into %s"
-msgstr ""
+msgstr "Erro ao formatar %s em %s"
 
 #: src/MainWindow.vala:342
 msgid "Error"
-msgstr ""
+msgstr "Erro"

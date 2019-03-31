@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.djaler.formatter\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-31 10:40+0200\n"
+"POT-Creation-Date: 2019-03-31 10:47+0200\n"
 "PO-Revision-Date: 2019-03-31 10:40+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -19,11 +19,11 @@ msgstr ""
 
 #: src/MainWindow.vala:76 src/MainWindow.vala:170
 msgid "Change"
-msgstr ""
+msgstr "Değiştir"
 
 #: src/MainWindow.vala:84 src/MainWindow.vala:209
 msgid "Device"
-msgstr ""
+msgstr "Cihaz"
 
 #: src/MainWindow.vala:102
 msgid "Formatter"
@@ -31,46 +31,46 @@ msgstr ""
 
 #: src/MainWindow.vala:133 src/MainWindow.vala:340
 msgid "Finished"
-msgstr ""
+msgstr "Bitti"
 
 #: src/MainWindow.vala:156
 msgid "File System"
-msgstr ""
+msgstr "Dosya Sistemi"
 
 #: src/MainWindow.vala:178 src/MainWindow.vala:225 src/MainWindow.vala:391
 msgid "No removable devices found…"
-msgstr ""
+msgstr "Çıkarılabilir cihaz bulunmadı…"
 
 #: src/MainWindow.vala:217
 msgid "Select Drive"
-msgstr ""
+msgstr "Cihaz Seç"
 
 #: src/MainWindow.vala:256
 msgid "Format"
-msgstr ""
+msgstr "Formatla"
 
 #: src/MainWindow.vala:264
 msgid "Format device"
-msgstr ""
+msgstr "Cihazı formatla"
 
 #: src/MainWindow.vala:272
 msgid "Enter label…"
-msgstr ""
+msgstr "Etiket Gir…"
 
 #: src/MainWindow.vala:287
 msgid "No device chosen…"
-msgstr ""
+msgstr "Cihaz seçilmedi…"
 
 #: src/MainWindow.vala:330
 #, c-format
 msgid "%s was formatted into %s"
-msgstr ""
+msgstr "%s %s üzerine formatlandı"
 
 #: src/MainWindow.vala:332
 #, c-format
 msgid "Error while formatting %s into %s"
-msgstr ""
+msgstr "%s 'dan %s 'a formatlanırken hata çıktı"
 
 #: src/MainWindow.vala:342
 msgid "Error"
-msgstr ""
+msgstr "Hata"

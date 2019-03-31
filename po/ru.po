@@ -1,15 +1,15 @@
 # Russian translations for com.github.djaler.formatter package.
 # Copyright (C) 2019 THE com.github.djaler.formatter'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.djaler.formatter package.
-# Automatically generated, 2019.
+# Андрей Культяпов, 2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.djaler.formatter\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-31 10:40+0200\n"
+"POT-Creation-Date: 2019-03-31 10:47+0200\n"
 "PO-Revision-Date: 2019-03-31 10:40+0200\n"
-"Last-Translator: Automatically generated\n"
+"Last-Translator: Андрей Культяпов <camellan@yandex.ru>\n"
 "Language-Team: none\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -20,58 +20,58 @@ msgstr ""
 
 #: src/MainWindow.vala:76 src/MainWindow.vala:170
 msgid "Change"
-msgstr ""
+msgstr "Изменить"
 
 #: src/MainWindow.vala:84 src/MainWindow.vala:209
 msgid "Device"
-msgstr ""
+msgstr "Устройство"
 
 #: src/MainWindow.vala:102
 msgid "Formatter"
-msgstr ""
+msgstr "Formatter"
 
 #: src/MainWindow.vala:133 src/MainWindow.vala:340
 msgid "Finished"
-msgstr ""
+msgstr "Завершено"
 
 #: src/MainWindow.vala:156
 msgid "File System"
-msgstr ""
+msgstr "Файловая система"
 
 #: src/MainWindow.vala:178 src/MainWindow.vala:225 src/MainWindow.vala:391
 msgid "No removable devices found…"
-msgstr ""
+msgstr "Съемные устройства не найдены…"
 
 #: src/MainWindow.vala:217
 msgid "Select Drive"
-msgstr ""
+msgstr "Выбрать диск"
 
 #: src/MainWindow.vala:256
 msgid "Format"
-msgstr ""
+msgstr "Форматировать"
 
 #: src/MainWindow.vala:264
 msgid "Format device"
-msgstr ""
+msgstr "Форматировать устройство"
 
 #: src/MainWindow.vala:272
 msgid "Enter label…"
-msgstr ""
+msgstr "Введите имя…"
 
 #: src/MainWindow.vala:287
 msgid "No device chosen…"
-msgstr ""
+msgstr "Не выбрано устройство…"
 
 #: src/MainWindow.vala:330
 #, c-format
 msgid "%s was formatted into %s"
-msgstr ""
+msgstr "%s было отформатирован в %s"
 
 #: src/MainWindow.vala:332
 #, c-format
 msgid "Error while formatting %s into %s"
-msgstr ""
+msgstr "Ошибка при форматировании %s в %s"
 
 #: src/MainWindow.vala:342
 msgid "Error"
-msgstr ""
+msgstr "Ошибка"
