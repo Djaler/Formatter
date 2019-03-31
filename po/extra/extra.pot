@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-25 13:55+0900\n"
+"POT-Creation-Date: 2019-03-31 10:41+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,10 +17,22 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: data/com.github.djaler.formatter.appdata.xml.in:7
 #: data/com.github.djaler.formatter.desktop.in:4
 #: data/com.github.djaler.formatter.desktop.in:6
+#: data/com.github.djaler.formatter.appdata.xml.in:7
 msgid "Formatter"
+msgstr ""
+
+#: data/com.github.djaler.formatter.desktop.in:5
+msgid "Format devices"
+msgstr ""
+
+#: data/com.github.djaler.formatter.desktop.in:7
+msgid "com.github.djaler.formatter"
+msgstr ""
+
+#: data/com.github.djaler.formatter.desktop.in:12
+msgid "Format;Device;USB;"
 msgstr ""
 
 #: data/com.github.djaler.formatter.appdata.xml.in:8
@@ -101,16 +113,4 @@ msgstr ""
 
 #: data/com.github.djaler.formatter.appdata.xml.in:104
 msgid "Format devices to ext4, FAT32 or NTFS"
-msgstr ""
-
-#: data/com.github.djaler.formatter.desktop.in:5
-msgid "Format devices"
-msgstr ""
-
-#: data/com.github.djaler.formatter.desktop.in:7
-msgid "com.github.djaler.formatter"
-msgstr ""
-
-#: data/com.github.djaler.formatter.desktop.in:12
-msgid "Format;Device;USB;"
 msgstr ""

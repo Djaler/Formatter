@@ -1,4 +1,75 @@
+# Tibetan translations for com.github.djaler.formatter package.
+# Copyright (C) 2019 THE com.github.djaler.formatter'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.djaler.formatter package.
+# Automatically generated, 2019.
+#
 msgid ""
 msgstr ""
+"Project-Id-Version: com.github.djaler.formatter\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-31 10:47+0200\n"
+"PO-Revision-Date: 2019-03-31 10:40+0200\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: bo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/MainWindow.vala:76 src/MainWindow.vala:170
+msgid "Change"
+msgstr ""
+
+#: src/MainWindow.vala:84 src/MainWindow.vala:209
+msgid "Device"
+msgstr ""
+
+#: src/MainWindow.vala:102
+msgid "Formatter"
+msgstr ""
+
+#: src/MainWindow.vala:133 src/MainWindow.vala:340
+msgid "Finished"
+msgstr ""
+
+#: src/MainWindow.vala:156
+msgid "File System"
+msgstr ""
+
+#: src/MainWindow.vala:178 src/MainWindow.vala:225 src/MainWindow.vala:391
+msgid "No removable devices found…"
+msgstr ""
+
+#: src/MainWindow.vala:217
+msgid "Select Drive"
+msgstr ""
+
+#: src/MainWindow.vala:256
+msgid "Format"
+msgstr ""
+
+#: src/MainWindow.vala:264
+msgid "Format device"
+msgstr ""
+
+#: src/MainWindow.vala:272
+msgid "Enter label…"
+msgstr ""
+
+#: src/MainWindow.vala:287
+msgid "No device chosen…"
+msgstr ""
+
+#: src/MainWindow.vala:330
+#, c-format
+msgid "%s was formatted into %s"
+msgstr ""
+
+#: src/MainWindow.vala:332
+#, c-format
+msgid "Error while formatting %s into %s"
+msgstr ""
+
+#: src/MainWindow.vala:342
+msgid "Error"
+msgstr ""
