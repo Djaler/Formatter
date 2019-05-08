@@ -144,7 +144,8 @@ namespace Formatter {
             check_selected_device ();
 
             if (selected_filesystem == null) {
-                selected_filesystem = filesystem_list.get_child_at_index(0) as Formatter.Filesystem;
+                int default_format_id = FormatterApp.settings.get_enum ("default-format");
+                selected_filesystem = filesystem_list.get_child_at_index (default_format_id) as Formatter.Filesystem;
             }
         }
 
@@ -294,6 +295,7 @@ namespace Formatter {
         private void on_select_filesystem (Gtk.FlowBoxChild item) {
             debug ("Selected filesystem: %s", (item as Formatter.Filesystem).filesystem.get_name ());
             selected_filesystem = item as Formatter.Filesystem;
+            FormatterApp.settings.set_enum ("default-format", (int) selected_filesystem.filesystem);
             filesystem_popover.visible = false;
         }
 

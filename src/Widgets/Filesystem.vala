@@ -19,11 +19,11 @@
 
 namespace Formatter {
     public enum Filesystems {
-        EXT4,
-        FAT16,
         FAT32,
-        NTFS,
+        FAT16,
         EXFAT,
+        EXT4,
+        NTFS,
         HFS_PLUS;
 
         public string get_name() {

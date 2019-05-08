@@ -23,6 +23,8 @@ namespace Formatter {
 
         static FormatterApp _instance = null;
 
+        public static Settings settings;
+
         public static FormatterApp instance {
             get {
                 if (_instance == null)
@@ -33,6 +35,10 @@ namespace Formatter {
 
         construct {
             application_id = "com.github.djaler.formatter";
+        }
+
+        static construct {
+            settings = new Settings ("com.github.djaler.formatter");
         }
 
         Gtk.Window mainwindow;

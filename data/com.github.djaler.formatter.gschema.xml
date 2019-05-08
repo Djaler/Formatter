@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <enum id="default-format">
+    <value value="0" nick="fat32"/>
+    <value value="1" nick="fat16"/>
+    <value value="2" nick="exfat"/>
+    <value value="3" nick="ext4"/>
+    <value value="4" nick="ntfs"/>
+    <value value="5" nick="hfs-plus"/>
+  </enum>
+
+  <schema path="/com/github/djaler/formatter/" id="com.github.djaler.formatter">
+    <key name="default-format" enum="default-format">
+      <default>'fat32'</default>
+      <summary>Default format</summary>
+    </key>
+  </schema>
+</schemalist>
