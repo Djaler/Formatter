@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-31 10:41+0200\n"
 "PO-Revision-Date: 2019-03-31 10:41+0200\n"
-"Last-Translator: Automatically generated\n"
+"Last-Translator: Mario Rodrigo\n"
 "Language-Team: none\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -21,27 +21,27 @@ msgstr ""
 #: data/com.github.djaler.formatter.desktop.in:6
 #: data/com.github.djaler.formatter.appdata.xml.in:7
 msgid "Formatter"
-msgstr ""
+msgstr "Formateador"
 
 #: data/com.github.djaler.formatter.desktop.in:5
 msgid "Format devices"
-msgstr ""
+msgstr "Formatear dispositivos"
 
 #: data/com.github.djaler.formatter.desktop.in:7
 msgid "com.github.djaler.formatter"
-msgstr ""
+msgstr "com.github.djaler.formatter"
 
 #: data/com.github.djaler.formatter.desktop.in:12
 msgid "Format;Device;USB;"
-msgstr ""
+msgstr "Formatear;Dispositivo;USB"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:8
 msgid "A simple device formatter"
-msgstr ""
+msgstr "Un formateador sencillo de dispositivos"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:10
 msgid "Format your removable devices like usb disk or sd card"
-msgstr ""
+msgstr "Formatea tus dispotivos externos como discos usb o tarjetas sd"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:20
 msgid "Kirill Romanov"
