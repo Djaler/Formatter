@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-31 10:47+0200\n"
 "PO-Revision-Date: 2019-03-31 10:40+0200\n"
-"Last-Translator: Automatically generated\n"
+"Last-Translator: Mario rodrigo\n"
 "Language-Team: none\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -19,58 +19,58 @@ msgstr ""
 
 #: src/MainWindow.vala:76 src/MainWindow.vala:170
 msgid "Change"
-msgstr ""
+msgstr "Cambiar"
 
 #: src/MainWindow.vala:84 src/MainWindow.vala:209
 msgid "Device"
-msgstr ""
+msgstr "Dispositivo"
 
 #: src/MainWindow.vala:102
 msgid "Formatter"
-msgstr ""
+msgstr "Formateador"
 
 #: src/MainWindow.vala:133 src/MainWindow.vala:340
 msgid "Finished"
-msgstr ""
+msgstr "Finalizado"
 
 #: src/MainWindow.vala:156
 msgid "File System"
-msgstr ""
+msgstr "Sistema de ficheros"
 
 #: src/MainWindow.vala:178 src/MainWindow.vala:225 src/MainWindow.vala:391
 msgid "No removable devices found…"
-msgstr ""
+msgstr "No se han encontrado dispositivos externos…"
 
 #: src/MainWindow.vala:217
 msgid "Select Drive"
-msgstr ""
+msgstr "Seleccione disco"
 
 #: src/MainWindow.vala:256
 msgid "Format"
-msgstr ""
+msgstr "Formatear"
 
 #: src/MainWindow.vala:264
 msgid "Format device"
-msgstr ""
+msgstr "Formatear dispositivo"
 
 #: src/MainWindow.vala:272
 msgid "Enter label…"
-msgstr ""
+msgstr "Introduzca etiqueta…"
 
 #: src/MainWindow.vala:287
 msgid "No device chosen…"
-msgstr ""
+msgstr "No se ha seleccionado ningún dispositivo…"
 
 #: src/MainWindow.vala:330
 #, c-format
 msgid "%s was formatted into %s"
-msgstr ""
+msgstr "%s se ha formateado en %s"
 
 #: src/MainWindow.vala:332
 #, c-format
 msgid "Error while formatting %s into %s"
-msgstr ""
+msgstr "Error durante el formateo de %s en %s"
 
 #: src/MainWindow.vala:342
 msgid "Error"
-msgstr ""
+msgstr "Error"
