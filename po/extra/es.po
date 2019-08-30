@@ -33,7 +33,7 @@ msgstr "com.github.djaler.formatter"
 
 #: data/com.github.djaler.formatter.desktop.in:12
 msgid "Format;Device;USB;"
-msgstr "Formatear;Dispositivo;USB"
+msgstr "Formatear;Dispositivo;USB;"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:8
 msgid "A simple device formatter"
