@@ -23,7 +23,7 @@ msgstr "Modifier"
 
 #: src/MainWindow.vala:84 src/MainWindow.vala:209
 msgid "Device"
-msgstr "Appareil"
+msgstr "Périphérique"
 
 #: src/MainWindow.vala:102
 msgid "Formatter"
