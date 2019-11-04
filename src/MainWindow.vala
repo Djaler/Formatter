@@ -20,39 +20,39 @@
 namespace Formatter {
 
     public class MainWindow : Gtk.ApplicationWindow {
+        private Gtk.Grid content;
 
-        Gtk.Grid content;
+        private Gtk.Grid filesystem_container;
+        private Gtk.FlowBox filesystem_list;
+        private Gtk.Popover filesystem_popover;
+        private Gtk.Label filesystem_name;
+        private Gtk.Button select_filesystem;
 
-        Gtk.Grid filesystem_container;
-        Gtk.FlowBox filesystem_list;
-        Gtk.Popover filesystem_popover;
-        Gtk.Label filesystem_name;
-        Gtk.Button select_filesystem;
+        private Gtk.Grid device_container;
+        private Gtk.Image device_logo;
+        private Gtk.FlowBox device_list;
+        private Gtk.Popover device_popover;
+        private Gtk.Button select_device;
+        private Gtk.Label device_name;
 
-        Gtk.Grid device_container;
-        Gtk.Image device_logo;
-        Gtk.FlowBox device_list;
-        Gtk.Popover device_popover;
-        Gtk.Button select_device;
-        Gtk.Label device_name;
+        private Granite.Widgets.Toast app_notification;
+        private Notification desktop_notification;
 
-        Granite.Widgets.Toast app_notification;
-        Notification desktop_notification;
+        private Gtk.Grid format_container;
+        private Gtk.Entry label_input;
+        private Gtk.Label format_label;
+        private Gtk.Button format_start;
 
-        Gtk.Grid format_container;
-        Gtk.Entry label_input;
-        Gtk.Label format_label;
-        Gtk.Button format_start;
+        private int label_max_length_bytes = 0;
 
-        int label_max_length_bytes = 0;
-
-        Formatter.Filesystem _selected_filesystem = null;
-        Formatter.Filesystem selected_filesystem {
+        private Formatter.Filesystem _selected_filesystem = null;
+        private Formatter.Filesystem selected_filesystem {
             get { return _selected_filesystem; }
             set {
                 if (selected_filesystem == value) {
                     return;
                 }
+
                 _selected_filesystem = value;
 
                 filesystem_name.label = selected_filesystem.filesystem.get_name ();
@@ -61,19 +61,21 @@ namespace Formatter {
             }
         }
 
-        Formatter.Device _selected_device = null;
-        Formatter.Device selected_device {
+        private Formatter.Device _selected_device = null;
+        private Formatter.Device selected_device {
             get { return _selected_device; }
             set {
                 if (selected_device == value) {
                     return;
                 }
+
                 _selected_device = value;
                 format_container.sensitive = selected_device != null;
 
                 if (selected_device != null) {
                     update_device_label ();
                     select_device.label = _("Change");
+
                     if (selected_device.is_card) {
                         device_logo.set_from_icon_name ("media-flash", Gtk.IconSize.DIALOG);
                     } else {
@@ -89,20 +91,18 @@ namespace Formatter {
             }
         }
 
-        bool has_removable_devices {
+        private bool has_removable_devices {
             get {
                 return device_list.get_children ().length () > 0;
             }
         }
 
-        Formatter.DeviceManager devices;
-        Formatter.DeviceFormatter formatter;
+        private Formatter.DeviceManager devices;
+        private Formatter.DeviceFormatter formatter;
 
         public MainWindow () {
             title = _("Formatter");
             resizable = false;
-
-            build_ui ();
 
             devices = DeviceManager.instance;
             devices.drive_connected.connect (device_added);
@@ -116,7 +116,7 @@ namespace Formatter {
             present ();
         }
 
-        private void build_ui () {
+        construct {
             get_style_context ().add_class ("rounded");
 
             content = new Gtk.Grid ();
@@ -155,7 +155,7 @@ namespace Formatter {
             filesystem_container.width_request = 180;
 
             var title = new Gtk.Label (_("File System"));
-            title.get_style_context ().add_class("h2");
+            title.get_style_context ().add_class ("h2");
             title.hexpand = true;
             filesystem_container.attach (title, 0, 0, 1, 1);
 
@@ -176,7 +176,7 @@ namespace Formatter {
             });
             filesystem_container.attach (select_filesystem, 0, 3, 1, 1);
 
-            filesystem_name = new Gtk.Label (("<i>%s</i>").printf(_("No removable devices found…")));
+            filesystem_name = new Gtk.Label (("<i>%s</i>").printf (_("No removable devices found…")));
             filesystem_name.use_markup = true;
             filesystem_container.attach (filesystem_name, 0, 2, 1, 1);
 
@@ -188,6 +188,7 @@ namespace Formatter {
                 if (selected_filesystem != null) {
                     filesystem_list.select_child (selected_filesystem);
                 }
+
                 selected_filesystem.grab_focus ();
             });
 
@@ -208,7 +209,7 @@ namespace Formatter {
             device_container.width_request = 180;
 
             var title = new Gtk.Label (_("Device"));
-            title.get_style_context ().add_class("h2");
+            title.get_style_context ().add_class ("h2");
             title.hexpand = true;
             device_container.attach (title, 0, 0, 1, 1);
 
@@ -223,7 +224,7 @@ namespace Formatter {
             });
             device_container.attach (select_device, 0, 3, 1, 1);
 
-            device_name = new Gtk.Label (("<i>%s</i>").printf(_("No removable devices found…")));
+            device_name = new Gtk.Label (("<i>%s</i>").printf (_("No removable devices found…")));
             device_name.use_markup = true;
             device_container.attach (device_name, 0, 2, 1, 1);
 
@@ -241,6 +242,7 @@ namespace Formatter {
                 if (selected_device != null) {
                     device_list.select_child (selected_device);
                 }
+
                 select_device.grab_focus ();
             });
 
@@ -255,7 +257,7 @@ namespace Formatter {
             format_container.width_request = 180;
 
             var title = new Gtk.Label (_("Format"));
-            title.get_style_context ().add_class("h2");
+            title.get_style_context ().add_class ("h2");
             title.hexpand = true;
             format_container.attach (title, 0, 0, 1, 1);
 
@@ -265,27 +267,29 @@ namespace Formatter {
             format_start = new Gtk.Button.with_label (_("Format device"));
             format_start.valign = Gtk.Align.END;
             format_start.vexpand = true;
-            format_start.get_style_context ().add_class(Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+            format_start.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
             format_start.clicked.connect (flash_image);
             format_container.attach (format_start, 0, 3, 1, 1);
 
             label_input = new Gtk.Entry ();
             label_input.placeholder_text = (_("Enter label…"));
             label_input.hexpand = true;
-            format_container.attach(label_input, 0, 2, 1, 1);
+            format_container.attach (label_input, 0, 2, 1, 1);
             label_input.changed.connect (() => {
                 update_partition_label_max_size ();
             });
             label_input.insert_text.connect ((new_text, new_text_length) => {
-                if (label_max_length_bytes != 0) {
-                    if (label_input.buffer.get_bytes() + new_text_length > label_max_length_bytes) {
-                        Signal.stop_emission_by_name (label_input, "insert_text");
-                        Gdk.beep ();
-                    }
+                if (label_max_length_bytes == 0) {
+                    return;
+                }
+
+                if (label_input.buffer.get_bytes () + new_text_length > label_max_length_bytes) {
+                    Signal.stop_emission_by_name (label_input, "insert_text");
+                    Gdk.beep ();
                 }
             });
 
-            format_label = new Gtk.Label (("<i>%s</i>").printf(_("No device chosen…")));
+            format_label = new Gtk.Label (("<i>%s</i>").printf (_("No device chosen…")));
             format_label.use_markup = true;
             format_container.attach (format_label, 0, 2, 1, 1);
 
@@ -328,10 +332,12 @@ namespace Formatter {
             format_container.sensitive = true;
 
             string message;
+            string device_name = selected_device.drive.get_name ();
+            string filesystem_name = selected_filesystem.filesystem.get_name ();
             if (success) {
-                message = _("%s was formatted into %s").printf (selected_device.drive.get_name (), selected_filesystem.filesystem.get_name ());   
+                message = _("%s was formatted into %s").printf (device_name, filesystem_name);
             } else {
-                message = _("Error while formatting %s into %s").printf (selected_device.drive.get_name (), selected_filesystem.filesystem.get_name ());
+                message = _("Error while formatting %s into %s").printf (device_name, filesystem_name);
             }
 
             if (is_active) {
@@ -349,13 +355,15 @@ namespace Formatter {
         }
 
         private void flash_image () {
-            if (!formatter.is_running) {
-                selected_device.umount_all_volumes ();
-
-                formatter.finished.connect (on_flash_finished);
-
-                formatter.format_partition.begin(selected_device.drive, selected_filesystem.filesystem, label_input.text);
+            if (formatter.is_running) {
+                return;
             }
+
+            selected_device.umount_all_volumes ();
+
+            formatter.finished.connect (on_flash_finished);
+
+            formatter.format_partition.begin (selected_device.drive, selected_filesystem.filesystem, label_input.text);
         }
 
         private void device_added (GLib.Drive drive) {
@@ -390,11 +398,11 @@ namespace Formatter {
             if (selected_device != null) {
                 device_name.label = selected_device.drive.get_name ();
             } else {
-                device_name.label = ("<i>%s</i>").printf(_("No removable devices found…"));
+                device_name.label = ("<i>%s</i>").printf (_("No removable devices found…"));
             }
         }
 
-        private void update_partition_label_max_size() {
+        private void update_partition_label_max_size () {
             label_max_length_bytes = 0;
             var label_max_length_chars = 0;
 
@@ -416,7 +424,7 @@ namespace Formatter {
                     label_max_length_chars = 64; //I didn't find real max length, but I think 64 it enough
                     break;
                 default:
-                    assert_not_reached();
+                    assert_not_reached ();
             }
 
             label_input.max_length = label_max_length_chars;
