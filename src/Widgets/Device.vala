@@ -18,11 +18,10 @@
  */
 
 namespace Formatter {
-    public class Device : Gtk.FlowBoxChild  {
-
-        Gtk.Grid content;
-        Gtk.Image icon;
-        Gtk.Label title;
+    public class Device : Gtk.FlowBoxChild {
+        private Gtk.Grid content;
+        private Gtk.Image icon;
+        private Gtk.Label title;
 
         public GLib.Drive drive { get; private set; }
 
@@ -53,22 +52,12 @@ namespace Formatter {
         }
 
         // METHODS
-        public string get_unix_device () {
-            return drive.get_identifier ("unix-device");
-        }
-
         public Gtk.Image get_medium_icon () {
             if (is_card) {
                 return new Gtk.Image.from_icon_name ("media-flash", Gtk.IconSize.LARGE_TOOLBAR);
             }
-            return new Gtk.Image.from_gicon (drive.get_icon (), Gtk.IconSize.LARGE_TOOLBAR);
-        }
 
-        public Gtk.Image get_large_icon () {
-            if (is_card) {
-                return new Gtk.Image.from_icon_name ("media-flash", Gtk.IconSize.DIALOG);
-            }
-            return new Gtk.Image.from_gicon (drive.get_icon (), Gtk.IconSize.DIALOG);
+            return new Gtk.Image.from_gicon (drive.get_icon (), Gtk.IconSize.LARGE_TOOLBAR);
         }
 
         public void umount_all_volumes () {
