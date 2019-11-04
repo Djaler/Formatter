@@ -20,17 +20,27 @@
 namespace Formatter {
 
     public class DeviceFormatter : GLib.Object {
+        public signal void begin ();
+        public signal void canceled ();
+        public signal void finished (bool success);
 
-        static DeviceFormatter _instance = null;
+        private static DeviceFormatter _instance = null;
         public static DeviceFormatter instance {
             get {
-                if (_instance == null)
+                if (_instance == null) {
                     _instance = new DeviceFormatter ();
+                }
+
                 return _instance;
             }
         }
 
-        private DeviceFormatter () {}
+        public bool is_running { get; private set; }
+
+        private Pid child_pid;
+
+        private DeviceFormatter () {
+        }
 
         construct {
             this.is_running = false;
@@ -48,15 +58,7 @@ namespace Formatter {
             });
         }
 
-        public bool is_running {get;set;}
-
-        public signal void begin ();
-        public signal void canceled ();
-        public signal void finished (bool success);
-
-        Pid child_pid;
-
-        public async void format_partition(Drive drive, Formatter.Filesystems filesystem, string label) {
+        public async void format_partition (Drive drive, Formatter.Filesystems filesystem, string label) {
             string[] spawn_args;
 
             string drive_identifier = drive.get_identifier ("unix-device");
@@ -104,7 +106,7 @@ namespace Formatter {
                     }
                     break;
                 default:
-                    assert_not_reached();
+                    assert_not_reached ();
             }
 
             int standard_error = 0;
