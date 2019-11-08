@@ -20,18 +20,20 @@
 namespace Formatter {
 
     public class FormatterApp : Gtk.Application {
-
-        static FormatterApp _instance = null;
-
-        public static Settings settings;
-
+        private static FormatterApp _instance = null;
         public static FormatterApp instance {
             get {
-                if (_instance == null)
+                if (_instance == null) {
                     _instance = new FormatterApp ();
+                }
+
                 return _instance;
             }
         }
+
+        private MainWindow mainwindow;
+
+        public static Settings settings;
 
         construct {
             application_id = "com.github.djaler.formatter";
@@ -41,8 +43,6 @@ namespace Formatter {
             settings = new Settings ("com.github.djaler.formatter");
         }
 
-        Gtk.Window mainwindow;
-
         protected override void activate () {
             if (mainwindow != null) {
                 mainwindow.present ();
@@ -50,7 +50,7 @@ namespace Formatter {
             }
 
             mainwindow = new MainWindow ();
-            mainwindow.set_application(this);
+            mainwindow.set_application (this);
         }
     }
 }
