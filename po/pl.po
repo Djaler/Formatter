@@ -1,15 +1,15 @@
 # Polish translations for com.github.djaler.formatter package.
 # Copyright (C) 2019 THE com.github.djaler.formatter'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.djaler.formatter package.
-# Dany Gee, 2019.
+# Translated by Dany Gee and Michał Nowakowski <nowakowski@offshore.rocks>, 2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.djaler.formatter\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-31 10:47+0200\n"
-"PO-Revision-Date: 2019-03-31 10:40+0200\n"
-"Last-Translator: Dany Gee <goferto@gmail.com>\n"
+"PO-Revision-Date: 2019-12-13 10:40+0200\n"
+"Last-Translator: Michał Nowakowski <nowakowski@offshore.rocks>\n"
 "Language-Team: none\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
@@ -56,7 +56,7 @@ msgstr "Sformatuj urządzenie"
 
 #: src/MainWindow.vala:272
 msgid "Enter label…"
-msgstr ""
+msgstr "Wprowadź etykietę…"
 
 #: src/MainWindow.vala:287
 msgid "No device chosen…"
@@ -70,8 +70,8 @@ msgstr "%s sformatowano jako %s"
 #: src/MainWindow.vala:332
 #, c-format
 msgid "Error while formatting %s into %s"
-msgstr ""
+msgstr "Wystąpił błąd przy formatowaniu %s jako %s"
 
 #: src/MainWindow.vala:342
 msgid "Error"
-msgstr ""
+msgstr "Błąd"
