@@ -51,7 +51,7 @@ namespace Formatter {
     }
 
     public class Filesystem : Gtk.FlowBoxChild {
-        public Filesystems filesystem { get; set; }
+        public Filesystems filesystem { get; construct; }
 
         public Filesystem (Filesystems filesystem) {
             Object (filesystem: filesystem);
