@@ -8,69 +8,70 @@ msgstr ""
 "Project-Id-Version: com.github.djaler.formatter\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-31 10:47+0200\n"
-"PO-Revision-Date: 2019-03-31 10:40+0200\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2020-08-21 17:00+0200\n"
+"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: none\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.4.1\n"
 
 #: src/MainWindow.vala:76 src/MainWindow.vala:170
 msgid "Change"
-msgstr ""
+msgstr "Wijzigen"
 
 #: src/MainWindow.vala:84 src/MainWindow.vala:209
 msgid "Device"
-msgstr ""
+msgstr "Apparaat"
 
 #: src/MainWindow.vala:102
 msgid "Formatter"
-msgstr ""
+msgstr "Formatteren"
 
 #: src/MainWindow.vala:133 src/MainWindow.vala:340
 msgid "Finished"
-msgstr ""
+msgstr "Afgerond"
 
 #: src/MainWindow.vala:156
 msgid "File System"
-msgstr ""
+msgstr "Bestandssysteem"
 
 #: src/MainWindow.vala:178 src/MainWindow.vala:225 src/MainWindow.vala:391
 msgid "No removable devices found…"
-msgstr ""
+msgstr "Geen verwijderbare apparaten aangetroffen…"
 
 #: src/MainWindow.vala:217
 msgid "Select Drive"
-msgstr ""
+msgstr "Kies een schijf"
 
 #: src/MainWindow.vala:256
 msgid "Format"
-msgstr ""
+msgstr "Formatteren"
 
 #: src/MainWindow.vala:264
 msgid "Format device"
-msgstr ""
+msgstr "Apparaat formatteren"
 
 #: src/MainWindow.vala:272
 msgid "Enter label…"
-msgstr ""
+msgstr "Voer een label in…"
 
 #: src/MainWindow.vala:287
 msgid "No device chosen…"
-msgstr ""
+msgstr "Geen apparaat gekozen…"
 
 #: src/MainWindow.vala:330
 #, c-format
 msgid "%s was formatted into %s"
-msgstr ""
+msgstr "%s is geformatteerd naar %s"
 
 #: src/MainWindow.vala:332
 #, c-format
 msgid "Error while formatting %s into %s"
-msgstr ""
+msgstr "Fout tijdens formatteren van %s naar %s"
 
 #: src/MainWindow.vala:342
 msgid "Error"
-msgstr ""
+msgstr "Fout"
