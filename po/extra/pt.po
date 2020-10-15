@@ -8,109 +8,110 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-31 10:41+0200\n"
-"PO-Revision-Date: 2019-03-31 10:41+0200\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2020-10-15 18:17+0100\n"
+"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: none\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.0.6\n"
 
 #: data/com.github.djaler.formatter.desktop.in:4
 #: data/com.github.djaler.formatter.desktop.in:6
 #: data/com.github.djaler.formatter.appdata.xml.in:7
 msgid "Formatter"
-msgstr ""
+msgstr "Formatter"
 
 #: data/com.github.djaler.formatter.desktop.in:5
 msgid "Format devices"
-msgstr ""
+msgstr "Formatar dispositivos"
 
 #: data/com.github.djaler.formatter.desktop.in:7
 msgid "com.github.djaler.formatter"
-msgstr ""
+msgstr "com.github.djaler.formatter"
 
 #: data/com.github.djaler.formatter.desktop.in:12
 msgid "Format;Device;USB;"
-msgstr ""
+msgstr "Formatar;Dispositivo;USB;"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:8
 msgid "A simple device formatter"
-msgstr ""
+msgstr "Uma aplicação simples para formatar dispositivos"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:10
 msgid "Format your removable devices like usb disk or sd card"
-msgstr ""
+msgstr "Formate os seus dispositivos removíveis tais como um disco USB ou cartão SD"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:20
 msgid "Kirill Romanov"
-msgstr ""
+msgstr "Kirill Romanov"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:34
 msgid "Add partition label limitations"
-msgstr ""
+msgstr "Adiciona limitações de etiqueta da partição"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:35
 msgid "Remove predefined partition label due to limitations"
-msgstr ""
+msgstr "Remove a etiqueta da partição predefinida devido às limitações"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:42
 msgid "Predefined partition label"
-msgstr ""
+msgstr "Etiqueta da partição predefinida"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:49
 msgid "Updated Russian translation"
-msgstr ""
+msgstr "Tradução russa atualizada"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:50
 msgid "Minor style improvement"
-msgstr ""
+msgstr "Pequena melhoria do estilo"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:57
 msgid "Check for exit codes"
-msgstr ""
+msgstr "Verifique os códigos de saída"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:58
 msgid "Set device label"
-msgstr ""
+msgstr "Defina a etiqueta do dispositivo"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:59
 msgid "HFS+ support"
-msgstr ""
+msgstr "Suporte a HFS +"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:60
 msgid "FAT16 support"
-msgstr ""
+msgstr "Suporte a FAT16"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:67
 msgid "Icon path fixed"
-msgstr ""
+msgstr "Caminho do ícone corrigido"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:74
 msgid "Added Lithuanian translate"
-msgstr ""
+msgstr "Adicionada tradução em lituano"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:75
 msgid "Added Russian translate"
-msgstr ""
+msgstr "Adicionada tradução em russo"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:82
 msgid "Typo fix"
-msgstr ""
+msgstr "Correção ortográfica"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:89
 msgid "USB 3.0 Support"
-msgstr ""
+msgstr "Suporte a USB 3.0"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:96
 msgid "Format to exFAT"
-msgstr ""
+msgstr "Formatar para exFAT"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:102
 msgid "Initial Release"
-msgstr ""
+msgstr "Lançamento inicial"
 
 #: data/com.github.djaler.formatter.appdata.xml.in:104
 msgid "Format devices to ext4, FAT32 or NTFS"
-msgstr ""
+msgstr "Formate dispositivos para ext4, FAT32 ou NTFS"
