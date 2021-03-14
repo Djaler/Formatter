@@ -423,6 +423,9 @@ namespace Formatter {
                 case Formatter.Filesystems.HFS_PLUS:
                     label_max_length_chars = 64; //I didn't find real max length, but I think 64 it enough
                     break;
+                case Formatter.Filesystems.UDF:
+                    label_max_length_chars = 64; //Max length is 128 but Unicode reduces it to 64
+                    break;
                 default:
                     assert_not_reached ();
             }

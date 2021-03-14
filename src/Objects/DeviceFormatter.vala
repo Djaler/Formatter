@@ -105,6 +105,13 @@ namespace Formatter {
                         spawn_args += label;
                     }
                     break;
+                case Formatter.Filesystems.UDF:
+                    spawn_args = {"pkexec", "mkfs.udf", drive_identifier};
+                    if (label != "") {
+                        spawn_args += "-l";
+                        spawn_args += label;
+                    }
+                    break;
                 default:
                     assert_not_reached ();
             }

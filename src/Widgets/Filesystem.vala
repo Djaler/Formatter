@@ -24,7 +24,8 @@ namespace Formatter {
         EXFAT,
         EXT4,
         NTFS,
-        HFS_PLUS;
+        HFS_PLUS,
+        UDF;
 
         public string get_name () {
             switch (this) {
@@ -40,13 +41,15 @@ namespace Formatter {
                     return "exFAT";
                 case HFS_PLUS:
                     return "HFS+";
+                case UDF:
+                    return "UDF";
                 default:
                     assert_not_reached ();
             }
         }
 
         public static Filesystems[] get_all () {
-            return { FAT32, FAT16, EXFAT, EXT4, NTFS, HFS_PLUS };
+            return { FAT32, FAT16, EXFAT, EXT4, NTFS, HFS_PLUS, UDF };
         }
     }
 
