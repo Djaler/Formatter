@@ -2,75 +2,77 @@
 # Copyright (C) 2019 THE com.github.djaler.formatter'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.djaler.formatter package.
 # Automatically generated, 2019.
+# Saverio <saverio.morelli@outlook.it>, 2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.djaler.formatter\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-31 10:47+0200\n"
-"PO-Revision-Date: 2019-03-31 10:40+0200\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-07-10 21:28+0200\n"
+"Last-Translator: Saverio <saverio.morelli@outlook.it>\n"
+"Language-Team: Italian <saverio.morelli@outlook.it>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"X-Generator: Gtranslator 40.0\n"
 
 #: src/MainWindow.vala:76 src/MainWindow.vala:170
 msgid "Change"
-msgstr ""
+msgstr "Modifica"
 
 #: src/MainWindow.vala:84 src/MainWindow.vala:209
 msgid "Device"
-msgstr ""
+msgstr "Dispositivo"
 
 #: src/MainWindow.vala:102
 msgid "Formatter"
-msgstr ""
+msgstr "Formattatore"
 
 #: src/MainWindow.vala:133 src/MainWindow.vala:340
 msgid "Finished"
-msgstr ""
+msgstr "Finito"
 
 #: src/MainWindow.vala:156
 msgid "File System"
-msgstr ""
+msgstr "File System"
 
 #: src/MainWindow.vala:178 src/MainWindow.vala:225 src/MainWindow.vala:391
 msgid "No removable devices found…"
-msgstr ""
+msgstr "Nessun dispositivo rimovibile trovato…"
 
 #: src/MainWindow.vala:217
 msgid "Select Drive"
-msgstr ""
+msgstr "Seleziona drive"
 
 #: src/MainWindow.vala:256
 msgid "Format"
-msgstr ""
+msgstr "Formatta"
 
 #: src/MainWindow.vala:264
 msgid "Format device"
-msgstr ""
+msgstr "Formatta dispositivo"
 
 #: src/MainWindow.vala:272
 msgid "Enter label…"
-msgstr ""
+msgstr "Inserisci un'etichetta…"
 
 #: src/MainWindow.vala:287
 msgid "No device chosen…"
-msgstr ""
+msgstr "Nessun dispositivo scelto…"
 
 #: src/MainWindow.vala:330
 #, c-format
 msgid "%s was formatted into %s"
-msgstr ""
+msgstr "%s è stato formattato in %s"
 
 #: src/MainWindow.vala:332
 #, c-format
 msgid "Error while formatting %s into %s"
-msgstr ""
+msgstr "Errore durante la formattazione di %s in %s"
 
 #: src/MainWindow.vala:342
 msgid "Error"
-msgstr ""
+msgstr "Errore"
